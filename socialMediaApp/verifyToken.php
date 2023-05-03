@@ -36,8 +36,8 @@ function verifyJWT($token)
 // To get JWT
 if( $_SERVER['REQUEST_METHOD'] === 'GET'){
     //Get Token from header
-    // $jwt_token = $_SERVER['HTTP_AUTHORIZATION'];
-    $jwt_token = "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCIsImtpZCI6Ik9sdXdhdG9iaUAyNCJ9.eyJlbWFpbCI6InRvYmlAdG9iaS5jb20iLCJleHBpcmVzIjoxNjgzMDM4MjI2fQ.FKIQ7y5u2tdXQUm8NDSnNP1yt-1za48eXLBsbe2ho0__CwUmbuc9eKKfb4_U32WLM3TrQNsYK7ucI7xU3Q1RpQ";
+    $jwt_token = $_SERVER['HTTP_AUTHORIZATION'];
+    
     //Check if user has been authenticated
     $user_email = verifyJWT($jwt_token);
     if($user_email){
