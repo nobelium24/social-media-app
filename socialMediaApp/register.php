@@ -50,11 +50,12 @@ $first_name = $data['first_name'];
 $last_name = $data['last_name'];
 $email = $data['email'];
 $password = password_hash($data['password'], PASSWORD_DEFAULT);
+$username = $data['username'];
 
 //Prepare the statement
-$insert = $conn->prepare("INSERT INTO users(first_name, last_name, email, password) VALUES(?, ?, ?, ?)");
+$insert = $conn->prepare("INSERT INTO users(first_name, last_name, email, password) VALUES(?, ?, ?, ?, ?)");
 //Bind the parameters
-$insert->bind_param("ssss", $first_name, $last_name, $email, $password);
+$insert->bind_param("sssss", $first_name, $last_name, $email, $password, $username);
 $success = $insert->execute();
 if ($success) {
     http_response_code(201);
