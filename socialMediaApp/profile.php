@@ -1,7 +1,7 @@
 <?php
 include "./dbConnect.php";
-$connection = new Connection();
-$connect = $connection->getConnection();
+$connect1 = new Connection();
+$connect = $connect1->getConnection();
 session_start();
 $name = $_SESSION["name"] ?? "Guest";
 $id = $_SESSION["id"];
