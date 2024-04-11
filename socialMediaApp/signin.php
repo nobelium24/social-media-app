@@ -12,6 +12,8 @@ $connection = $connect->getConnection();
 $data = json_decode(file_get_contents('php://input'), true);
 session_start();
 
+// print_r ($data);
+
 try {
     if(!isset($data['email']) && !isset($data['password'])){
         echo json_encode(["message"=>"Invalid input"]);

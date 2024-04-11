@@ -3,6 +3,7 @@
         "monolog/monolog": "^2.0",
         "vlucas/phpdotenv": "^5.5",
         "firebase/php-jwt": "^6.4",
-        "cloudinary/cloudinary_php": "^2"
+        "cloudinary/cloudinary_php": "^2",
+        "aws/aws-sdk-php": "^2.8"
     }
 }
